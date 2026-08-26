@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { Link } from 'react-router-dom'
 import { Wrench, Phone, MapPin, CalendarCheck, CheckCircle, ArrowLeft } from 'lucide-react'
 
@@ -44,25 +45,15 @@ export default function Reserva() {
     setEnviando(true)
 
     try {
-      // Envía los datos a Web3Forms → llega correo automático al taller y al cliente
-      // Ve a web3forms.com, pon tu correo y copia la Access Key aquí:
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: 'e924a892-2f98-4359-82d0-43ea0e6d7733',
-          subject: `Nueva solicitud de reserva - ${formData.nombre}`,
-          from_name: 'Taller Eldasa Web',
-          // Esto hace que si tú le das a "Responder" al correo, le llegue al cliente:
-          replyto: formData.email,
-          // Esto LE ENVÍA un correo automático al cliente:
-          autoresponse: `Hola ${formData.nombre},\n\nHemos recibido tu solicitud de reserva en Taller Eldasa con éxito.\n\nPronto nos pondremos en contacto contigo para confirmar la disponibilidad y los detalles del servicio para tu vehículo.\n\nGracias por preferirnos.\n\nTaller Mecánico Eldasa\n+56 9 4498 7410`,
-          ...formData,
-        }),
-      })
-      const data = await res.json()
+      // Envía los datos a EmailJS (aviso al taller y auto-respuesta al cliente)
+      const res = await emailjs.send(
+        'service_tyy59cc',
+        'template_sf3xccj',
+        formData,
+        '6-aXrO8nNulWUoY24'
+      )
 
-      if (data.success) {
+      if (res.status === 200) {
         setEnviado(true)
         // Abre WhatsApp con los datos del formulario listos para enviar
         const numero = '56944987410' // Número real del taller
