@@ -69,10 +69,12 @@ export default function Reserva() {
           `¡Quedo atento a la confirmación!`
         window.open(`https://wa.me/${numero}?text=${texto}`, '_blank')
       } else {
-        alert('Hubo un error enviando el formulario. Por favor contáctanos por WhatsApp.')
+        console.error('Error de EmailJS (Status no es 200):', res)
+        alert('Hubo un error enviando el formulario. Revisa la consola (F12).')
       }
-    } catch {
-      alert('Error de red. Por favor contáctanos directamente por WhatsApp.')
+    } catch (error) {
+      console.error('Error crítico capturado por EmailJS:', error)
+      alert('Error de red o de credenciales. Revisa la consola (F12) para ver el detalle exacto.')
     } finally {
       setEnviando(false)
     }
