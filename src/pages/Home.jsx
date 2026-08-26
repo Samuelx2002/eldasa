@@ -105,34 +105,45 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero — imagen de fondo con overlay */}
-      <section className="relative text-white">
-        <div className="absolute inset-0 bg-black/55 z-10" />
-        <div
-          className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/hero-eldasa.jpg')" }}
-        />
-        <div className="relative z-20 max-w-6xl mx-auto px-4 pt-48 pb-20 md:pt-60 md:pb-28 flex flex-col items-start">
-          <span
-            className="text-sm font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6"
-            style={{ backgroundColor: AMARILLO, color: '#1a1a1a' }}
-          >
-            Mecánica Automotriz
-          </span>
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-5 max-w-2xl">
-            Tu vehículo en manos de expertos.
-          </h2>
-          <p className="text-lg text-gray-200 mb-8 max-w-xl">
-            Más que filtros y lubricantes — vida para tu vehículo. Diagnóstico, mantenimiento y reparación integral en San Vicente de Tagua Tagua.
-          </p>
-          <Link
-            to="/reserva"
-            className="font-bold text-lg px-8 py-3 rounded-md text-gray-900 flex items-center gap-2 transition hover:opacity-90"
-            style={{ backgroundColor: AMARILLO }}
-          >
-            <CalendarCheck className="w-5 h-5" />
-            Reservar Ahora
-          </Link>
+      {/* Hero — imagen completa 100% visible */}
+      <section className="bg-[#141414]">
+        <div className="relative flex flex-col md:block">
+          
+          {/* Contenedor de la foto real - dicta el tamaño en desktop */}
+          <div className="relative w-full">
+            <img
+              src="/hero-eldasa.jpg"
+              alt="Taller Eldasa — Mantenimiento, Filtros, Lubricantes"
+              className="w-full h-auto object-contain"
+            />
+            {/* Capa oscura suave sobre la foto para que el texto blanco resalte */}
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
+
+          {/* Bloque de texto - En celular va debajo, en PC va centrado sobre la imagen */}
+          <div className="md:absolute md:inset-0 z-20 flex flex-col items-center justify-center px-4 py-12 md:py-0 text-center">
+            <span
+              className="text-xs md:text-sm font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 md:mb-6"
+              style={{ backgroundColor: AMARILLO, color: '#1a1a1a' }}
+            >
+              Mecánica Automotriz
+            </span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-5 max-w-4xl text-white drop-shadow-lg">
+              Tu vehículo en manos de expertos.
+            </h2>
+            <p className="text-sm md:text-lg lg:text-xl text-gray-200 mb-6 md:mb-8 max-w-2xl drop-shadow-md">
+              Diagnóstico, mantenimiento y reparación integral en San Vicente de Tagua Tagua.
+            </p>
+            <Link
+              to="/reserva"
+              className="font-bold text-base md:text-lg px-8 py-3 rounded-md text-gray-900 flex items-center gap-2 transition hover:opacity-90 shadow-xl"
+              style={{ backgroundColor: AMARILLO }}
+            >
+              <CalendarCheck className="w-5 h-5" />
+              Reservar Ahora
+            </Link>
+          </div>
+
         </div>
       </section>
 
