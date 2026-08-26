@@ -48,7 +48,7 @@ export default function Reserva() {
       // Envía los datos a EmailJS (aviso al taller y auto-respuesta al cliente)
       const res = await emailjs.send(
         'service_tyy59cc',
-        'template_sf3xccj',
+        'template_4lxrvsg',
         formData,
         '6-aXrO8nNulWUoY24'
       )
