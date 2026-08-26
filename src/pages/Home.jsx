@@ -109,10 +109,10 @@ export default function Home() {
       <section className="relative text-white">
         <div className="absolute inset-0 bg-black/55 z-10" />
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: "url('/hero-eldasa.jpg')" }}
         />
-        <div className="relative z-20 max-w-6xl mx-auto px-4 py-28 md:py-36 flex flex-col items-start">
+        <div className="relative z-20 max-w-6xl mx-auto px-4 pt-48 pb-20 md:pt-60 md:pb-28 flex flex-col items-start">
           <span
             className="text-sm font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6"
             style={{ backgroundColor: AMARILLO, color: '#1a1a1a' }}
