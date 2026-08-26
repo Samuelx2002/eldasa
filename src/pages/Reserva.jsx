@@ -50,7 +50,7 @@ export default function Reserva() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: 'TU_ACCESS_KEY_DE_WEB3FORMS', // ← CAMBIA ESTO
+          access_key: 'e924a892-2f98-4359-82d0-43ea0e6d7733',
           subject: `Nueva solicitud de reserva - ${formData.nombre}`,
           from_name: 'Taller Eldasa Web',
           // Correo de confirmación automático al cliente:
