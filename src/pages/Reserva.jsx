@@ -53,8 +53,10 @@ export default function Reserva() {
           access_key: 'e924a892-2f98-4359-82d0-43ea0e6d7733',
           subject: `Nueva solicitud de reserva - ${formData.nombre}`,
           from_name: 'Taller Eldasa Web',
-          // Correo de confirmación automático al cliente:
+          // Esto hace que si tú le das a "Responder" al correo, le llegue al cliente:
           replyto: formData.email,
+          // Esto LE ENVÍA un correo automático al cliente:
+          autoresponse: `Hola ${formData.nombre},\n\nHemos recibido tu solicitud de reserva en Taller Eldasa con éxito.\n\nPronto nos pondremos en contacto contigo para confirmar la disponibilidad y los detalles del servicio para tu vehículo.\n\nGracias por preferirnos.\n\nTaller Mecánico Eldasa\n+56 9 4498 7410`,
           ...formData,
         }),
       })
