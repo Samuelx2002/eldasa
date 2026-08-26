@@ -105,7 +105,7 @@ export default function Reserva() {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" style={{ color: AMARILLO_OSCURO }} />
-              Rancagua, Chile
+              San Vicente de Tagua Tagua
             </div>
           </div>
           <Link

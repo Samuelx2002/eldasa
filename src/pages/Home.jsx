@@ -92,7 +92,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" style={{ color: AMARILLO_OSCURO }} />
-              Rancagua, Chile
+              San Vicente de Tagua Tagua
             </div>
           </div>
           <Link
@@ -123,7 +123,7 @@ export default function Home() {
             Tu vehículo en manos de expertos.
           </h2>
           <p className="text-lg text-gray-200 mb-8 max-w-xl">
-            Más que filtros y lubricantes — vida para tu vehículo. Diagnóstico, mantenimiento y reparación integral en Rancagua.
+            Más que filtros y lubricantes — vida para tu vehículo. Diagnóstico, mantenimiento y reparación integral en San Vicente de Tagua Tagua.
           </p>
           <Link
             to="/reserva"
@@ -200,7 +200,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-sm text-gray-600 hover:underline"
             >
-              Rancagua, Chile<br />Ver en Google Maps →
+              Guardia Suiza Norte 1781<br />San Vicente de Tagua Tagua<br />Ver en Google Maps →
             </a>
           </div>
         </div>
