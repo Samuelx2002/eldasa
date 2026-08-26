@@ -155,23 +155,33 @@ export default function Reserva() {
                 <InputField label="Año del vehículo" type="number" name="anio" required placeholder="Ej: 2019" onChange={handleChange} />
                 <InputField label="Kilometraje" type="number" name="kilometraje" placeholder="Ej: 50000" onChange={handleChange} />
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Tipo de servicio</label>
-                  <select
-                    name="servicio"
-                    required
-                    onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-md p-3 focus:outline-none bg-white transition"
-                    onFocus={e => e.target.style.borderColor = AMARILLO_OSCURO}
-                    onBlur={e => e.target.style.borderColor = '#d1d5db'}
-                  >
-                    <option value="">Seleccione un servicio</option>
-                    <option value="Mantenimiento Preventivo">Mantenimiento Preventivo</option>
-                    <option value="Frenos">Frenos</option>
-                    <option value="Diagnóstico Scanner">Diagnóstico Scanner</option>
-                    <option value="Mecánica Integral">Mecánica Integral</option>
-                    <option value="Otro">Otro (especificar abajo)</option>
-                  </select>
-                </div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Tipo de servicio
+                </label>
+                <select
+                  name="servicio"
+                  required
+                  value={formData.servicio}
+                  onChange={handleChange}
+                  className="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:outline-none bg-white"
+                  style={{ focusRingColor: AMARILLO }}
+                >
+                  <option value="">Seleccione un servicio</option>
+                  <option value="Mantenimiento Preventivo">Mantenimiento Preventivo</option>
+                  <option value="Frenos">Frenos</option>
+                  <option value="Diagnóstico Scanner">Diagnóstico Scanner</option>
+                  <option value="Mecánica Integral">Mecánica Integral</option>
+                  <option value="Suspensión">Suspensión</option>
+                  <option value="Embrague">Embrague</option>
+                  <option value="Correa de Distribución">Cambio Correa de Distribución</option>
+                  <option value="Enderezada y Pintada">Enderezada y Pintada</option>
+                  <option value="Afinación de Motor">Afinación de Motor</option>
+                  <option value="Reparación de Culata">Reparación de Culata</option>
+                  <option value="Reparación de Motor">Reparación de Motor</option>
+                  <option value="Pulida de Ópticos">Pulida de Ópticos</option>
+                  <option value="Otro">Otro (especificar abajo)</option>
+                </select>
+              </div>
               </div>
 
               <div>
