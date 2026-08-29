@@ -79,7 +79,7 @@ export default function Home() {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/logo-eldasa.jpg" alt="Logo Taller Eldasa" className="h-10 w-auto rounded-sm" />
+            <img src="/logo-eldasa.webp" alt="Logo Taller Eldasa" className="h-10 w-auto rounded-sm" width="40" height="40" />
             <div>
               <h1 className="text-xl font-black leading-none text-gray-900">Taller Eldasa</h1>
               <p className="text-xs text-gray-500 leading-none tracking-wide uppercase">Mecánica Automotriz</p>
@@ -112,9 +112,12 @@ export default function Home() {
           {/* Contenedor de la foto real - dicta el tamaño en desktop */}
           <div className="relative w-full">
             <img
-              src="/hero-eldasa.jpg"
+              src="/hero-eldasa.webp"
               alt="Taller Eldasa — Mantenimiento, Filtros, Lubricantes"
               className="w-full h-auto object-contain"
+              style={{ aspectRatio: '16/9' }}
+              width="1600"
+              height="900"
             />
             {/* Capa oscura suave sobre la foto para que el texto blanco resalte */}
             <div className="absolute inset-0 bg-black/50" />
