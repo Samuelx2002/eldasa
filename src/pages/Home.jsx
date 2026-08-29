@@ -114,7 +114,7 @@ export default function Home() {
             <img
               src="/hero-eldasa.webp"
               alt="Taller Eldasa — Mantenimiento, Filtros, Lubricantes"
-              className="w-full h-auto object-contain"
+              className="w-full h-full object-cover object-top"
               style={{ aspectRatio: '16/9' }}
               width="1600"
               height="900"
